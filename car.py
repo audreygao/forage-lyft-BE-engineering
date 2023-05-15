@@ -1,10 +1,10 @@
-from abc import ABC, abstractmethod
+from serviceable import Serviceable, needs_service
 
 
-class Car(ABC):
+class Car(Serviceable):
     def __init__(self, last_service_date):
         self.last_service_date = last_service_date
 
-    @abstractmethod
+    @needs_service
     def needs_service(self):
         pass
