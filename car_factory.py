@@ -18,9 +18,9 @@ class CarFactory:
         car = Car(battery, engine)
         return car
     
-    def create_palindrome(current_date, last_service_date, current_mileage, last_service_mileage):
+    def create_palindrome(current_date, last_service_date, warning_light_is_on):
         battery = SpindlerBattery(last_service_date, current_date)
-        engine = SternmanEngine(current_mileage, last_service_mileage)
+        engine = SternmanEngine(warning_light_is_on)
         car = Car(battery, engine)
         return car
     
