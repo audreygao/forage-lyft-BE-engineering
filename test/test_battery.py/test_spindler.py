@@ -5,7 +5,7 @@ from battery.spindler_battery import SpindlerBattery
 class TestSpindlerBattery(unittest.TestCase):
     def testNeedsServiceTrue(self):
         today = datetime.today().date()
-        last_service_date = today.replace(year=today.year - 3)
+        last_service_date = today.replace(year=today.year - 4)
         
         battery = SpindlerBattery(last_service_date, today)
         self.assertTrue(battery.needs_service())
